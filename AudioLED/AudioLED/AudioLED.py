@@ -54,19 +54,19 @@ try:
                 rms_hist = np.roll(rms_hist, -1)
                 rms_hist[-1] = rms
 
-                if (rms > 200):
+                if (rms > 2000):
                     GPIO.output(18, GPIO.HIGH)
                 else:
                     GPIO.output(18, GPIO.LOW)
-                if (rms > 800):
+                if (rms > 8000):
                     GPIO.output(23, GPIO.HIGH)
                 else:
                     GPIO.output(23, GPIO.LOW)
-                if (rms > 1500):
+                if (rms > 15000):
                     GPIO.output(24, GPIO.HIGH)
                 else:
                     GPIO.output(24, GPIO.LOW)
-                if (rms > 2000):
+                if (rms > 20000):
                     GPIO.output(25, GPIO.HIGH)
                 else:
                     GPIO.output(25, GPIO.LOW)
