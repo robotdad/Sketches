@@ -1,6 +1,6 @@
 import sys
 import ptvsd
-ptvsd.enable_attach(secret = '12thman')
+ptvsd.enable_attach()
 
 import ptvsd.visualstudio_py_util
 sys.modules['visualstudio_py_util'] = ptvsd.visualstudio_py_util
