@@ -1,6 +1,6 @@
 import sys
 import ptvsd
-ptvsd.enable_attach()
+ptvsd.enable_attach('')
 
 import ptvsd.visualstudio_py_util
 sys.modules['visualstudio_py_util'] = ptvsd.visualstudio_py_util
@@ -54,21 +54,19 @@ try:
                 rms_hist = np.roll(rms_hist, -1)
                 rms_hist[-1] = rms
 
-                print(rms)
-
-                if (rms > 2000):
+                if (rms > 200):
                     GPIO.output(18, GPIO.HIGH)
                 else:
                     GPIO.output(18, GPIO.LOW)
-                if (rms > 8000):
+                if (rms > 800):
                     GPIO.output(23, GPIO.HIGH)
                 else:
                     GPIO.output(23, GPIO.LOW)
-                if (rms > 15000):
+                if (rms > 1500):
                     GPIO.output(24, GPIO.HIGH)
                 else:
                     GPIO.output(24, GPIO.LOW)
-                if (rms > 20000):
+                if (rms > 2000):
                     GPIO.output(25, GPIO.HIGH)
                 else:
                     GPIO.output(25, GPIO.LOW)
